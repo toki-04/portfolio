@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Todo App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- <h1 class="title">TODO APP</h1> -->
+
+  <div class="todo-counter">
+      <img src="{% static 'todo/images/peroro-arona.png' %}" />
+      <div class="bubble">
+          <img src="{% static 'todo/images/bubble.png' %}" />
+          <span class="counter" id="counter">0</span>
+      </div>
+  </div>
+
+  <form action="" method="post">
+    {% csrf_token %}
+      <div class="text-form">{{form}}</div>
+      <button class="submit" type="submit">
+        <img src="{% static 'todo/images/add.png' %}"/>
+      </button>
+
+  </form>
+
+  <div class="todos">
+  {% for item in todo %}
+  <div class="todo-container" id=todo_container_{{forloop.counter}}>
+    {% if item.is_done %}
+    <input
+          type="checkbox"
+          id=checkbox_{{forloop.counter}}
+          onclick='update_todo(`todo_container_{{forloop.counter}}`, "{% url 'todo:update' item.id%}");'
+          checked
+        >
+
+
+    {% else %}
+
+    <input
+          type="checkbox"
+          id=checkbox_{{forloop.counter}}
+          onclick='update_todo(`todo_container_{{forloop.counter}}`, "{% url 'todo:update' item.id%}");'>
+
+    {% endif %}
+
+        <textarea
+          class="text"
+          id=`text_{{forloop.counter}}`
+          rows="1"
+          cols="1"
+          spellcheck="false"
+          onchange='update_todo(`todo_container_{{forloop.counter}}`, "{% url 'todo:update' item.id%}");'>{{item.todo_text}}</textarea>
+        <button 
+          class="remove"
+          onclick='remove_todo(
+            `todo_container_{{forloop.counter}}`,
+            `item.id`,
+            "{% url 'todo:remove' item.id %}",
+          )'>
+            <img src="{% static '/todo/images/close.png' %}" />
+        </button>
+  </div>
+  {% endfor %}
+  </div>
+</body>
+
+
+<script src="{% static 'todo/script.js' %}"></script>
+
+</html>

@@ -1,0 +1,137 @@
+h1 {
+  color: white;
+}
+
+body{
+  background-color: #2C3948;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.todo-counter{
+  display:flex;
+  position:relative;
+  margin-top:20px;
+}
+
+.todo-counter .bubble{
+  position:absolute;
+  width:60px;
+  height:50px;
+  left:150px;
+  bottom:40px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.todo-counter .bubble img{
+  width:100%;
+  height:100%;
+}
+
+
+.todo-counter .bubble span{
+  position:absolute;
+  margin-top:-5px;
+  font-weight: 500;
+  
+
+}
+
+
+.todo-counter img{
+  max-width:150px;
+
+}
+
+.todos{
+  overflow:scroll;
+  max-height:400px;
+}
+
+
+.todo-container{
+  display:flex;
+  align-items:center;
+  padding:15px;
+  margin:5px;
+  background-color:white;
+  width:500px;
+
+border-radius:4px;
+}
+
+.todo-container .text{
+  margin-right:10px;
+  margin-left:10px;
+  width:400px;
+  height:2rem;
+  border:none;
+  outline:none;
+  resize:none;
+  font-size:1.3rem;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.todo-container .remove {
+  width:36px;
+  height:32px;
+  margin-left:4px;
+  border:none;
+  background:none;
+  cursor:pointer;
+
+    margin-left:auto;
+}
+
+.todo-container .remove img{
+  width:100%;
+  height:100%;
+  cursor:pointer;
+}
+
+
+
+form {
+  display: flex;
+  margin-bottom:8px;
+}
+
+
+form .submit{
+  width:56px;
+  height:48px;
+  margin-left:4px;
+  border:none;
+  background-color: #2C3948;
+}
+
+form .submit img{
+  width:100%;
+  height:100%;
+  cursor:pointer;
+}
+
+form .text-form{
+  width:450px;
+  background:white;
+  padding:5px 10px;
+  border-radius:4px;
+}
+form .text-form input{
+  border:none;
+  background:none;
+  width:100%;
+  height:100%;
+  outline:none;
+  font-size:1.5rem;
+}
+
+
