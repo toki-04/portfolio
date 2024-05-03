@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Qr Code Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link href="{% static 'qr/style.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" href="{%  static 'qr/images/favicon.ico' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="title">Qr Code Generator</h1>
+  <div class="qr">
+    <div class="qr-body">
+        <div class="icons">
+          <div>
+              <img src="{% static 'qr/images/url.png' %}" /><span>URL</span>
+          </div>
+          <div>
+              <img src="{% static 'qr/images/wifi.png' %}" /><span>WIFI</span>
+          </div>
+          <div>
+              <img src="{% static 'qr/images/txt.png' %}" /><span>TXT</span>
+          </div>
+        </div>
+        <textarea class="qr-text" id="qr-text"></textarea>
+        <button
+          class="qr-btn"
+          onclick='generate_qr_code(`{% url "qr:generate" %}`)'>
+          GENERATE QR CODE
+        </button>
+    </div>
+
+    <div class="qr-settings" id="qr-settings">
+        <h3>QR CODE GENERATED</h3>
+        <img id="qr-code" class="qr-code"/>
+        <button class="qr-btn"><a  href="{% static 'qr/images/qr.png' %}" download>DOWNLOAD QR CODE</a></button>
+    </div>
+  </div>
+
+
+
+</body>
+  <script src="{% static 'qr/script.js' %}"></script>
+
+</html>

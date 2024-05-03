@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "todo.apps.TodoConfig",
+    "qr_code_generator.apps.QrCodeGeneratorConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

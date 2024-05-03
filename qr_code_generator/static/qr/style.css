@@ -1,0 +1,130 @@
+html, body{
+  background-color: #03C988;
+ }
+
+* {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1{
+  color: white;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.qr .qr-body{
+  display: flex;
+  flex-direction: column;
+  width:500px;
+
+  background-color:white;
+  padding:16px;
+box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+-webkit-box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+}
+
+.qr .qr-body .icons{
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+
+
+.qr .qr-body .icons div{
+  display:flex;
+  align-items:center;
+}
+.qr .qr-body .icons span{
+  color:#03C988;
+  font-size:1.3rem;
+  font-weight:bold;
+  margin-left:4px;
+}
+
+
+.qr-body .qr-text{
+  height: 250px;
+  margin-top:16px;
+  padding:16px;
+  outline:none;
+  border:1px solid black;
+  resize:none;
+  
+
+}
+
+.qr .qr-body .qr-btn{
+  margin-top:16px;
+  margin-left:auto;
+}
+.qr-btn{
+  width:180px;
+  height:40px;
+  font-weight:600;
+  font-size:1rem;
+  border:none;
+  background-color:white;
+  color:#03C988;
+  transition: 0.3s;
+}
+
+
+.qr-btn:hover{
+  background-color:#03C988;
+  color:white;
+
+}
+
+.qr{
+  display:flex;
+  gap:32px;
+
+}
+
+.qr-settings{
+  width:300px;
+  background-color:white;
+  padding:16px 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+align-items:center;
+
+box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+-webkit-box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 13px 15px 0px 0px rgba(0,0,0,1);
+
+  display:none;
+}
+
+.qr .qr-settings h3{
+  margin:0;
+  text-align:center;
+}
+
+.qr .qr-settings .qr-btn a{
+  color: #03C988;
+  text-decoration:none;
+  transtion:0.3s;
+}
+
+.qr .qr-settings .qr-btn:hover a{
+  color: white;
+}
+
+
+
+.qr .qr-settings .qr-code{
+  width:100%;
+}
+
+.qr .qr-settings .qr-btn{
+  margin-top:auto;
+}
+
