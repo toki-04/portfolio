@@ -1,0 +1,47 @@
+*{
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  background: rgb(72,154,219);
+  background: linear-gradient(98deg, rgba(72,154,219,1) 16%, rgba(154,234,252,1) 79%);
+}
+.introduction {
+  padding: 16px 32px;
+  color:white;
+}
+
+h2{
+  padding:0 32px;
+  color:white;
+}
+.project-container{
+  display: flex;
+  gap:16px;
+  justify-content:center;
+  align-items:center;
+  padding: 16px 32px;
+}
+
+.project-container .project{
+    width:100%;
+}
+
+
+.project-container .project a{
+    color:white;
+    /* text-decoration:none; */
+    font-weight:700;
+}
+
+.project-container .project img{
+  max-width:600px;
+  margin-top:8px;
+
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
+}
+
+
+

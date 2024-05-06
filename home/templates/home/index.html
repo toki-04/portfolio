@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kyle Pagayon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link href="{% static 'home/style.css' %}" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="introduction">
+    <h1>Hi I'm Kyle Pagayon</h1>
+    <h3>Welcome to my Portfolio</h3><br>
+  </div>
+
+
+  <h2>My Project's</h2>
+  <div class="project-container">
+    <div class="project">
+      <a href="{% url 'todo:index' %}" target=”_blank”>
+        Todo App
+
+        <img src="{% static 'home/images/todo-app.png' %}" />
+      </a>
+    </div>
+
+    <div class="project">
+      <a href="{% url 'qr:index' %}" target=”_blank”>
+        QR Code Generator
+
+        <img src="{% static 'home/images/qr-code-generator.png' %}" />
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>
