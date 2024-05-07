@@ -13,33 +13,165 @@
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
+
+
 <body>
+  <header>
+    <a href="{% url 'home:index' %}">Kyle Pagayon</a>
 
-  <div class="introduction">
+    <div class="navigation">
+      <a class="projects" href="#project-section" style="hover:background-color:#FF8CB2">Projects</a>
+      <a class="technologies" href="#technologies-section">Technologies</a>
+      <a class="socials" href="#socials-section">Socials</a>
+      <a class="about" href="#about-section">About Me</a>
+    </div>
+  </header>
+
+  <section class="introduction" id="introduction">
     <h1>Hi I'm Kyle Pagayon</h1>
-    <h3>Welcome to my Portfolio</h3><br>
-  </div>
+    <h2>Welcome to my Portfolio</h2>
 
-
-  <h2>My Project's</h2>
-  <div class="project-container">
-    <div class="project">
-      <a href="{% url 'todo:index' %}" target=”_blank”>
-        Todo App
-
-        <img src="{% static 'home/images/todo-app.png' %}" />
-      </a>
+    <div class="navigation">
+      <a href="#project-section" style="background-color:#FF8CB2;">Projects</a>
+      <a href="#technologies-section" style="background-color:#BAD368;">Technologies</a>
+      <a href="#socials-section" style="background-color:#4697E8;">Socials</a>
+      <a href="#about-section" style="background-color:#FE8B81;">About Me</a>
     </div>
 
-    <div class="project">
-      <a href="{% url 'qr:index' %}" target=”_blank”>
-        QR Code Generator
-
-        <img src="{% static 'home/images/qr-code-generator.png' %}" />
-      </a>
+    <div class="peroro">
+      <img src="{% static 'home/images/peroro.png' %}" />
     </div>
-  </div>
+  </section>
+
+
+  <section class="project-section" id="project-section">
+    <h2>My Project's</h2>
+    <div class="project-container">
+      <div class="project">
+        <a href="{% url 'todo:index' %}" target=”_blank”>
+          Todo App
+          <img src="{% static 'home/images/todo-app.png' %}" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="{% url 'todo:index' %}" target=”_blank”>
+          Todo App
+          <img src="{% static 'home/images/todo-app.png' %}" />
+        </a>
+      </div>
+
+      <div class="project">
+        <a href="{% url 'qr:index' %}" target=”_blank”>
+          QR Code Generator
+
+          <img src="{% static 'home/images/qr-code-generator.png' %}" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="technologies-section" id="technologies-section">
+    <h2>Technologies</h2>
+
+    <div class="container">
+      <div class="technologies-icon">
+
+        <h1>Front-End</h1>
+        <div class="front-end">
+          <div>
+            <h2>HTML</h2>
+            <img src="{% static 'home/images/html.png' %}" />
+          </div>
+
+          <div>
+            <h2>CSS</h2>
+            <img src="{% static 'home/images/css-3.png' %}" />
+          </div>
+
+          <div>
+            <h2>JAVASCRIPT</h2>
+            <img src="{% static 'home/images/js.png' %}" />
+          </div>
+        </div>
+
+        <h1>Back-End</h1>
+        <div class="front-end">
+          <div>
+            <h2>PYTHON</h2>
+            <img src="{% static 'home/images/python.png' %}" />
+          </div>
+
+          <div>
+            <h2>MYSQL</h2>
+            <img src="{% static 'home/images/sql-server.png' %}" />
+          </div>
+        </div>
+
+      </div>
+      <div class="">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum."</p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="socials-section" id="socials-section">
+    <h2>Socials</h2>
+
+    <div class="container">
+      <div class="social-icons">
+        <div>
+          <img src="{% static 'home/images/gmail.png' %}" />
+          <span id="email">kylepagayon58@gmail.com</span>
+          <img class="copy" src="{% static 'home/images/copy.png' %}" onclick='clipboard("email")' />
+        </div>
+
+        <div>
+          <img src="{% static 'home/images/facebook.png' %}" />
+          <a id="facebook"
+            target="_blank"
+            href="https://www.facebook.com/kylepagayon.pagayon">https://www.facebook.com/kylepagayon.pagayon</a>
+          <img class="copy" src="{% static 'home/images/copy.png' %}" onclick='clipboard("facebook")' />
+        </div>
+
+        <div>
+          <img src="{% static 'home/images/github.png' %}" />
+          <a id="github" target="_blank" href="https://github.com/toki-04">https://github.com/toki-04</a>
+          <img class="copy" src="{% static 'home/images/copy.png' %}" onclick='clipboard("github")' />
+        </div>
+      </div>
+
+      <div class="speech-bubble">
+        <h3>Send me a message!</h3>
+
+      </div>
+      <div>
+
+  </section>
+
+  <section class="about-section" id="about-section">
+    <h2>About Me</h2>
+
+    <div class="container">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum."</p>
+
+        <img src="{% static 'home/images/complete.png' %}" />
+
+    </div>
+  </section>
 
 </body>
+
+<script src="{% static 'home/script.js' %}"></script>
 
 </html>

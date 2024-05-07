@@ -1,42 +1,151 @@
 *{
   font-family: "Pixelify Sans", sans-serif;
+  padding:0;
+  margin:0;
 }
-
-body {
-  background: rgb(72,154,219);
-  background: linear-gradient(98deg, rgba(72,154,219,1) 16%, rgba(154,234,252,1) 79%);
-}
-.introduction {
-  padding: 16px 32px;
-  color:white;
-}
-
-h2{
-  padding:0 32px;
-  color:white;
-}
-.project-container{
-  display: flex;
-  gap:16px;
+body{
+  max-width:1200px;
+  display:flex;
+  flex-direction:column;
   justify-content:center;
-  align-items:center;
+  margin:0 auto;
+
+  background-image: url("/static/home/images/background.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+  /* background-size: 100% 100%; */
+
+}
+
+header{
+  padding:16px 32px;
+  /* background-color:white; */
+  /* background: rgb(72,154,219); */
+  /* background: linear-gradient(98deg, rgba(72,154,219,1) 16%, rgba(154,234,252,1) 79%); */
+
+  background-color: #2C3948;
+
+  display:flex;
+  justify-content:space-between;
+  
+}
+
+header a{
+  font-size:1.5rem;
+  color:white;
+  text-decoration:none;
+}
+
+header .navigation{
+  display:flex;
+  gap:8px;
+}
+
+header .navigation a{
+  font-size:1rem;
+  text-decoration:none;
+  padding:8px;
+  color:white;
+  font-weight:700;
+  transition:0.2s;
+}
+
+
+header .navigation .projects:hover{
+  color:#FF8CB2;
+}
+header .navigation .technologies:hover{
+  color:#BAD368;
+}
+header .navigation .socials:hover{
+  color:#4697E8;
+}
+header .navigation .about:hover{
+  color:#FE8B81;
+}
+
+
+.introduction {
+  height:100vh;
   padding: 16px 32px;
+  margin-top:32px;
+
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  align-items:center;
+
+  display:flex;
+
+  color: #2C3948;
+
 }
 
-.project-container .project{
-    width:100%;
+.introduction h1{
+  font-size:4rem;
 }
 
+
+.introduction h2{
+  font-size:2rem;
+}
+
+.introduction .navigation{
+  display:flex;
+  gap:16px;
+  margin:32px 0 ;
+}
+
+
+.introduction .navigation a{
+  font-size:1.1rem;
+  text-decoration:none;
+  padding:8px 16px;
+  color:white;
+  font-weight:700px;
+
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.51);
+
+
+}
+
+.introduction .peroro{
+  margin:16px 0;
+}
+.introduction .peroro img{
+  max-width:350px;
+}
+
+section{
+  padding: 16px 32px;
+  margin:32px;
+}
+
+section h2{
+  font-size:3rem;
+  margin-bottom:16px;
+}
+
+
+/* PROJECT SECTION */
+.project-container{
+  padding: 16px 32px;
+  display:grid;
+  grid-auto-flow:column dense; /* column flow with "dense" to fill all the cells */
+  grid-template-rows:50% 50%; /* 2 rows */
+  gap:32px 16px;
+}
 
 .project-container .project a{
-    color:white;
-    /* text-decoration:none; */
-    font-weight:700;
+  color:black;
+  text-decoration:none;
+  font-weight:700;
 }
 
 .project-container .project img{
-  max-width:600px;
-  margin-top:8px;
+  /* max-width:600px; */
+  width:100%;
+  height:100%;
 
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
 -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
@@ -44,4 +153,87 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.51);
 }
 
 
+
+/* TECHNOLOGIES SECTION*/
+.technologies-section .container{
+  display:flex;
+  justify-content:space-between;
+  gap:32px;
+  margin:0 32px;
+}
+
+.technologies-section .container div{
+  max-width:600px;
+  }
+
+
+.technologies-section .container div p{
+  font-size:1.1rem;
+}
+
+
+.technologies-section .container .technologies-icon .front-end{
+  display:flex;
+  gap:16px;
+}
+
+.technologies-section .container .technologies-icon .front-end div{
+  margin:16px 0;
+}
+.technologies-section .container .technologies-icon .front-end div h2{
+  font-size:1.2rem;
+  margin:0;
+  text-align:center;
+}
+.technologies-section .container .technologies-icon .front-end div img{
+  width:120px
+}
+
+/* SOCIALS SECTION */
+.socials-section .container{
+  margin:0 16px;
+  display:flex;
+  gap:16px;
+  align-items:center;
+/* justify-content:center; */
+}
+
+.socials-section .container .social-icons div{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:16px;
+}
+
+.socials-section .container .social-icons div a, span{
+  font-size:1.2rem;
+  color:black;
+}
+
+.socials-section .container .social-icons div .copy{
+  margin-left:16px;
+  cursor:pointer;
+}
+
+.socials-section .container .speech-bubble{
+  background-image: url("/static/home/images/speech-bubble.png");
+  /* background-size: contain; */
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+padding:32px;
+margin-bottom:32px;
+color:white;
+
+max-height:100px;
+}
+
+/* ABOUT ME SECTION */
+.about-section .container{
+  display:flex;
+  gap:16px;
+}
 
