@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Connect Four</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link href="{% static 'connect_four/style.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" href="{%  static 'connect_four/images/favicon.ico' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <div>
+      <h1 class="turn" id="turn">Turn: Yellow</h1>
+      <div class="score">
+        <h3 class="score_player_1" id="score_player_1">Yellow: 0</h3>
+        <h3 class="score_player_2" id="score_player_2">Red: 0</h3>
+      </div>
+
+    </div>
+    <!-- <img id="reset_btn" class="reset_btn" src="{% static 'connect_four/images/reset.png' %}" /> -->
+      <h3 class="reset_btn" id="reset_btn">Reset</h3>
+  </div>
+  <div id="container" class="container"></div>
+
+  </div>
+
+</body>
+
+<script src="{% static 'connect_four/script.js' %}"></script>
+
+</html>

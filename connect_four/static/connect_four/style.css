@@ -1,0 +1,94 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: "Pixelify Sans", sans-serif;
+}
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#2e3440;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:560px;
+  
+  margin:32px 0;
+}
+
+.header .score{
+  display:flex;
+  gap:16px;
+}
+
+.header .score .score_player_1{
+  color:yellow;
+}
+
+.header .score .score_player_2{
+  color:red;
+}
+
+.reset_btn{
+  cursor:pointer;
+  color:white;
+
+
+}
+.container{
+  display:grid;
+  grid-template-columns:repeat(7, 80px);
+  grid-template-rows:repeat(6, 80px);
+  grid-gap:0;
+
+}
+
+
+
+.container .cell{
+  display:flex;
+
+  /* border-radius:100px; */
+  background-color:#4c566a;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container .cell div{
+  width:60px;
+  height:60px;
+  border-radius:100px;
+}
+
+.container .cell .empty{
+
+  background-color:white;
+}
+
+
+
+
+.container .cell .player2{
+  background-color:red;
+
+}
+
+.highlight_win{
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+  0%{opacity:0;}
+  25%{opacity:.25;}
+  50%{opacity:.5;}
+  100%{opacity:1;}
+}
+.container .cell .player1{
+  background-color:yellow;
+}
