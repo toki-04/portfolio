@@ -3,7 +3,10 @@ export class Collage {
     this.collage_name = collage_name;
     this.num_of_collage = num_of_collage;
     this.icon_url= icon_url;
+
+    this.collage_child_id = [];
   }
+
 
   create_collage(target_container_id){
     const container = document.getElementById(target_container_id);
@@ -12,14 +15,37 @@ export class Collage {
     collage_container.setAttribute("class", `${this.collage_name} collage`);
 
     for (let i=0; i<this.num_of_collage; i++){
+      const collage_label = document.createElement("label");
+      let input_id = `collage-input-${i+1}`
+      collage_label.setAttribute("for", input_id)
+
       const collage = document.createElement("div");
-      collage.setAttribute("class", `div-${i+1}`);
+      let collage_id = `div-${i+1}`;
+      collage.setAttribute("id", collage_id);
 
       const collage_icon = document.createElement("img");
-      collage_icon.setAttribute("src", this.icon_url);
-      collage.appendChild(collage_icon);
+      let icon_id = `div-${i+1}-icon`;
+      collage_icon.setAttribute("id", icon_id)
+      collage_icon.setAttribute("src",this.icon_url);
 
-      collage_container.appendChild(collage);
+      const collage_input = document.createElement("input");
+      collage_input.setAttribute("type", "file");
+      collage_input.setAttribute("accept", "image/*");
+      collage_input.setAttribute("id", input_id);
+
+      this.collage_child_id.push(
+        {
+          "input": input_id,
+          "collage": collage_id,
+          "icon": icon_id,
+        }
+      )
+
+
+      collage.appendChild(collage_icon);
+      collage.appendChild(collage_input);
+      collage_label.appendChild(collage);
+      collage_container.appendChild(collage_label);
     }
 
     container.appendChild(collage_container);
