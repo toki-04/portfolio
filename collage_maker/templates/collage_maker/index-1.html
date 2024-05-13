@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Collage Maker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link href="{% static 'collage_maker/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Collage Maker</h1>
+  </header>
+  <div class="container">
+      <div class="sidebar">
+        <h1>Choose a collage</h1>
+        <div id="collage-icon-container"></div>
+
+        <h1>Background color</h1>
+        <div id="color-list">
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+          <div class="color-1"></div>
+        </div>
+
+        <button id="download-collage">Download Collage</button>
+      </div>
+
+      <div id="collage-container"></div>
+      
+  </div>
+
+</body>
+<script type="module" src="{% static 'collage_maker/script.js' %}"></script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Collage Maker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link href="{% static 'collage_maker/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Collage Maker</h1>
+  </header>
+  <div class="collage">
+    <div class="collage-header">
+    </div>
+    <div class="collage-body">
+        <img id="btn-prev" src="{% static 'collage_maker/images/left-arrow.png' %}"/>
+        <div id="container-1"></div>
+        <div id="container-2"></div>
+        <div id="container-3"></div>
+
+        <img id="btn-next" src="{% static 'collage_maker/images/right-arrow.png' %}"/>
+    </div>
+  </div>
+
+</body>
+<script type="module" src="{% static 'collage_maker/script.js' %}"></script>
+
+</html>
