@@ -13,6 +13,7 @@ export class Collage {
 
     const collage_container = document.createElement("div");
     collage_container.setAttribute("class", `${this.collage_name} collage`);
+    collage_container.setAttribute("id", "collage");
 
     for (let i=0; i<this.num_of_collage; i++){
       const collage_label = document.createElement("label");
@@ -22,6 +23,7 @@ export class Collage {
       const collage = document.createElement("div");
       let collage_id = `div-${i+1}`;
       collage.setAttribute("id", collage_id);
+
 
       const collage_icon = document.createElement("img");
       let icon_id = `div-${i+1}-icon`;
