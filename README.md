@@ -11,3 +11,7 @@
 ### Connect Four
 
 ![Connect Four](https://raw.githubusercontent.com/toki-04/portfolio/main/project-images/connect_four.png)
+
+### Collage Maker
+
+![Connect Four](https://raw.githubusercontent.com/toki-04/portfolio/main/project-images/collage-maker.png)

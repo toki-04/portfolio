@@ -1,5 +1,6 @@
-import { Collage } from "./collage.js"
-import { color_list } from "./color_list.js"
+
+import { Collage } from "./collage.js";
+import { color_list } from "./color_list.js";
 
 const collage_1 = new Collage(
   "collage-1",
@@ -35,10 +36,16 @@ const collage_7 = new Collage(
   "/static/collage_maker/images/add.png",
 )
 
+const collage_8 = new Collage(
+  "collage-8",
+  3,
+  "/static/collage_maker/images/add.png",
+)
+
 
 const collage_list = [
   collage_1, collage_2, collage_3, collage_4,
-  collage_6, collage_7];
+  collage_6, collage_7, collage_8];
 let current_collage_idx = 0;
 
 const collage_container = document.getElementById("collage-container");
@@ -154,6 +161,12 @@ function change_collage_background_color(color){
 get_collage(current_collage_idx);
 generate_collage_icon();
 generate_collor_list();
+
+// Change collage background color using input
+const input_custom_color = document.getElementById("input-custom-color");
+input_custom_color.addEventListener("change", function(){
+  change_collage_background_color(input_custom_color.value);
+});
 
 
 
